@@ -1,7 +1,5 @@
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
-# R Training <img src='man/figures/logo.png' align="right" height="120" style="background:none; border:none; box-shadow:none;" />
+# R Training <img src='man/figures/logo.png' align="right" height="120" style="background:none; background-color: transparent !important; border:none; box-shadow:none;" />
 
 <!-- badges: start -->
 

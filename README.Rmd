@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
 <!-- badges: end -->
 
 The goal of `rtraining` is to provide useful resources, knowledge, and 
-walkthroughs for new R developers. 
+walkthroughs for new R developers.  
 
 The package is split into three main areas:
 

@@ -1,0 +1,19 @@
+---
+title: "R Bookdowns List"
+output: html_document
+resource_files: 
+  - bookdowns-list-new_files
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{=html}
+```{r, echo=FALSE, results='asis'}
+xfun::file_string("fragments/_fragment.html")
+```
+```

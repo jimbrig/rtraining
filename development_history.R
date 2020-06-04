@@ -109,6 +109,8 @@ desc::desc_normalize()
 
 # vignettes ---------------------------------------------------------------
 usethis::use_vignette("setting-up-r", title = "Setting up R and RStudio")
+usethis::use_vignette("bookdown-list", title = "R Bookdowns List")
+usethis::use_vignette("shiny-training", title = "R Shiny Training Resources")
 
 # check build tools -------------------------------------------------------
 pkgbuild::check_build_tools()

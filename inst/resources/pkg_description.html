@@ -1,0 +1,47 @@
+<div class="container-fluid main-container">
+
+
+
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<div id="rtraining" class="section level1">
+<h1>rtraining</h1>
+<!-- description: start -->
+<p>This is package {rtraining}: R Training Resources, Guides, Tips, and Knowledge Base.<br />
+Current version is 0.0.1.
+<!-- description: end --></p>
+<div id="installation" class="section level2">
+<h2>Installation</h2>
+<!-- install: start -->
+<p>The list of dependencies required to install this package is: attachment, chameleon, devtools, knitr, pkgdown, rmarkdown, roxygen2, utils, xfun.</p>
+<p>To install the package, you can run the following script</p>
+<pre class="r"><code># install.packages(&quot;remotes&quot;)
+remotes::install_local(path = &quot;rtraining_0.0.1.tar.gz&quot;)</code></pre>
+<p>In case something went wrong, you may want to install dependencies before using:</p>
+<pre class="r"><code># Remotes ----
+install.packages(&quot;remotes&quot;)
+remotes::install_github(&#39;ThinkR-open/chameleon&#39;)
+# Attachments ----
+to_install &lt;- c(&quot;xfun&quot;)
+  for (i in to_install) {
+    message(paste(&quot;looking for &quot;, i))
+    if (!requireNamespace(i)) {
+      message(paste(&quot;     installing&quot;, i))
+      install.packages(i)
+    }
+  }</code></pre>
+<!-- install: end -->
+</div>
+</div>
+
+
+
+
+</div>

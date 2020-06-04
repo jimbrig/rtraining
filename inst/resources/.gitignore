@@ -1,0 +1,6 @@
+*
+!.gitignore
+!bookdowns-list-new_files
+!fragment.md
+!fragment.Rmd
+!pkg_description.html

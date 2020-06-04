@@ -10,9 +10,17 @@ Description: Houses variouse material realted to teaching R.
 License: MIT + file LICENSE
 Depends: 
     R (>= 2.10)
+Imports: 
+    utils,
+    chameleon (>= 0.0.1.9000),
+    xfun
 Suggests: 
+    attachment,
+    devtools,
     knitr,
-    rmarkdown
+    pkgdown,
+    rmarkdown,
+    roxygen2
 VignetteBuilder: 
     knitr
 Encoding: UTF-8
@@ -20,3 +28,5 @@ Language: es
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.0
+Remotes: 
+    ThinkR-open/chameleon

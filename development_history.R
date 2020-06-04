@@ -99,6 +99,11 @@ desc::desc_set("Depends", "R (>= 2.10)")
 desc::desc_normalize()
 
 
+# packages ----------------------------------------------------------------
+usethis::use_package("pkgdown", type = "suggests")
+usethis::use_package("attachment", type = "suggests")
+usethis::use_package("xfun")
+
 # data --------------------------------------------------------------------
 
 
@@ -133,7 +138,9 @@ knitr::knit("README.Rmd")
 # update dependencies
 rstudioapi::restartSession()
 attachment::att_to_description(
-  extra.suggests = c("devtools", "attachment", "roxygen2")
+  extra.suggests = c("devtools", "attachment", "roxygen2",
+                     "pkgdown", "attachment", "chameleon",
+                     "xfun")
 )
 attachment::create_dependencies_file(to = "inst/scripts/dependencies.R")
 
@@ -167,5 +174,14 @@ devtools::release()
 
 
 # package down ------------------------------------------------------------
+chameleon::create_book()
+chameleon::build_book()
+chameleon::build_pkgdown()
+
+chameleon::open_pkgdown_function()
+chameleon::create_pkg_desc_file(out.dir = ".")
+chameleon::open_guide_function(path = "inst/report")
+devtools::document()
+
 pkgdown::init_site()
 pkgdown::build_articles()

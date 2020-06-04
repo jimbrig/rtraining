@@ -12,8 +12,13 @@ knitr::opts_chunk$set(
 )
 ```
 
+```{r setup}
+library(xfun)
+```
+
+
 ```{=html}
 ```{r, echo=FALSE, results='asis'}
-xfun::file_string("fragments/_fragment.html")
+xfun::file_string("_fragment.html")
 ```
 ```

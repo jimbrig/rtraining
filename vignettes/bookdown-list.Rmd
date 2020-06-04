@@ -5,8 +5,6 @@ resource_files:
   - bookdowns-list-new_files
 ---
 
-# R Bookdowns List
-
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,

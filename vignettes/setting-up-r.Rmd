@@ -7,8 +7,6 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-# R Setup Guide
-
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
@@ -21,7 +19,9 @@ knitr::opts_chunk$set(
 )
 ```
 
-<img src="../man/figures/rstudio_logo.png" style="background:none; border:none; box-shadow:none;">
+<img src="../man/figures/rstudio_logo.png" height = "120" style="background:none; border:none; box-shadow:none;">
+
+# Setting Up R and RStudio
 
 ***
 

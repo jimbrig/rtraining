@@ -1,19 +1,22 @@
 Package: rtraining
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Title: R Training Resources, Guides, Tips, and Knowledge Base
+Version: 0.0.1
 Authors@R: 
     person(given = "Jimmy",
            family = "Briggs",
            role = c("aut", "cre"),
            email = "jimmy.briggs@oliverwyman.com")
-Description: What the package does (one paragraph).
+Description: Houses variouse material realted to teaching R.
 License: MIT + file LICENSE
+Depends: 
+    R (>= 2.10)
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: 
+    knitr
 Encoding: UTF-8
 Language: es
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.0
-Suggests: 
-    knitr,
-    rmarkdown
-VignetteBuilder: knitr

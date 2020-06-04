@@ -2,7 +2,7 @@
 pagetitle: "Setting up R and RStudio"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Setting up R and RStudio}
+  %\VignetteIndexEntry{setting-up-r}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -147,7 +147,7 @@ software resources:
 
 +	Git
 
-+	A Git Client GUI
++	A Git Client GUI (or just use RStudio)
 
 +	Git LFS
 
@@ -168,7 +168,7 @@ software resources:
 
 + Inno
 
-Here's the code to install these addional resources:
+Here's the code to install these additional resources:
 
 ```{r additional_resources, eval=FALSE}
 
@@ -248,6 +248,45 @@ install RTools, Git, Pandoc, and a Latex service.
 I have provided an R script named R-Setup-Script.R with this guide that uses the
 `installr` package to help ease the process of installing all these extra 
 resources.
+
+## Advanced Configuration
+
+This section discusses more advanced R related configurations such as:
+
++ Environment Paths 
++ Detailed System Information 
++ Dotfiles 
++ Common pitfalls 
+
+For more advanced R developers you may want to further configure your development
+environement by customizing you R related dotfiles;
+specifically, your *.Rprofile* and *.Renviron*.
+
+Here is what my minimal setup includes:
+
+
+Additionally, you can configure keybinding for RStudio addins from RStudio and 
+store them within the .R folder located in your *R_USER* path. To view
+this path run `Sys.getenv("R_USER")`.
+
+On a windows computer, you may need to adjust where the system chooses to look 
+for various R related items on your system. For example, the path to your RTools 
+bin executable, your HOME path, your library path for packages, 
+and many other windows specific paths. Note the difference between 
+SYSTEM PATHS and USER PATHS.
+
+To add your system RTOOLS PATH to your .Renviron 
+(easier than manually configuring within windows system settings) run the code:
+
+```{r rtools_path, eval=FALSE}
+cat('PATH = ${RTOOLS40_HOME}\\usr\\bin;${PATH}',
+    file = fs::path(Sys.getenv("R_USER"), "/.Renviron"), 
+    append = TRUE)
+```
+
+YOu can also view the allocated memory RAM your machine allows R to use by 
+running `forgot the function..`.
+
 
 
 

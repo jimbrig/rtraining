@@ -104,4 +104,11 @@ library(rtraining)
 rtraining::open_pkgdown()
 ```
 
+
+Similarly you can open the package `bookdown` with:
+
+```{r open_guide, eval=FALSE}
+rtraining::open_guide()
+```
+
 <!-- install: end -->

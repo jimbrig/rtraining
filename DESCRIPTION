@@ -13,7 +13,8 @@ Depends:
 Imports: 
     utils,
     chameleon (>= 0.0.1.9000),
-    xfun
+    xfun,
+    bookdown
 Suggests: 
     attachment,
     devtools,

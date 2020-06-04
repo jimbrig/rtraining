@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 R Setup Guide | R Shiny Training Resources</title>
+  <meta name="description" content="R Training Resources, Guides, Tips, and Knowledge Base." />
+  <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 R Setup Guide | R Shiny Training Resources" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="R Training Resources, Guides, Tips, and Knowledge Base." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 R Setup Guide | R Shiny Training Resources" />
+  
+  <meta name="twitter:description" content="R Training Resources, Guides, Tips, and Knowledge Base." />
+  
+
+<meta name="author" content="Jimmy Briggs" />
+
+
+<meta name="date" content="2020-06-04" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="r-bookdowns-list.html"/>
+<link rel="next" href="getting-started-with-r-and-shiny.html"/>
+<script src="libs/header-attrs-2.2/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css]" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.0.1" data-path="index.html"><a href="index.html#contents"><i class="fa fa-check"></i><b>1.0.1</b> Contents</a></li>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#installation"><i class="fa fa-check"></i><b>1.1</b> Installation</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="r-bookdowns-list.html"><a href="r-bookdowns-list.html"><i class="fa fa-check"></i><b>2</b> R Bookdowns List</a></li>
+<li class="chapter" data-level="3" data-path="r-setup-guide.html"><a href="r-setup-guide.html"><i class="fa fa-check"></i><b>3</b> R Setup Guide</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="r-setup-guide.html"><a href="r-setup-guide.html#installing-r-rstudio"><i class="fa fa-check"></i><b>3.1</b> Installing R &amp; RStudio</a></li>
+<li class="chapter" data-level="3.2" data-path="r-setup-guide.html"><a href="r-setup-guide.html#download-r"><i class="fa fa-check"></i><b>3.2</b> Download R</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="r-setup-guide.html"><a href="r-setup-guide.html#additional-notes-on-r"><i class="fa fa-check"></i><b>3.2.1</b> Additional Notes on R</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="r-setup-guide.html"><a href="r-setup-guide.html#download-rstudio"><i class="fa fa-check"></i><b>3.3</b> Download RStudio</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="r-setup-guide.html"><a href="r-setup-guide.html#additional-notes-on-rstudio"><i class="fa fa-check"></i><b>3.3.1</b> Additional Notes on RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="r-setup-guide.html"><a href="r-setup-guide.html#configure-rstudio-settings"><i class="fa fa-check"></i><b>3.4</b> Configure RStudio Settings</a></li>
+<li class="chapter" data-level="3.5" data-path="r-setup-guide.html"><a href="r-setup-guide.html#installing-and-setting-up-additional-software-and-utilities"><i class="fa fa-check"></i><b>3.5</b> Installing and Setting Up Additional Software and Utilities</a></li>
+<li class="chapter" data-level="3.6" data-path="r-setup-guide.html"><a href="r-setup-guide.html#advanced-configuration"><i class="fa fa-check"></i><b>3.6</b> Advanced Configuration</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="getting-started-with-r-and-shiny.html"><a href="getting-started-with-r-and-shiny.html"><i class="fa fa-check"></i><b>4</b> Getting Started with R and Shiny</a>
+<ul>
+<li class="chapter" data-level="4.0.1" data-path="getting-started-with-r-and-shiny.html"><a href="getting-started-with-r-and-shiny.html#getting-stated-with-r"><i class="fa fa-check"></i><b>4.0.1</b> Getting Stated with R</a></li>
+<li class="chapter" data-level="4.0.2" data-path="getting-started-with-r-and-shiny.html"><a href="getting-started-with-r-and-shiny.html#getting-started-with-github"><i class="fa fa-check"></i><b>4.0.2</b> Getting Started with GitHub</a></li>
+<li class="chapter" data-level="4.0.3" data-path="getting-started-with-r-and-shiny.html"><a href="getting-started-with-r-and-shiny.html#a-deeper-dive-into-r"><i class="fa fa-check"></i><b>4.0.3</b> A Deeper Dive into R</a></li>
+<li class="chapter" data-level="4.0.4" data-path="getting-started-with-r-and-shiny.html"><a href="getting-started-with-r-and-shiny.html#getting-started-with-shiny"><i class="fa fa-check"></i><b>4.0.4</b> Getting Started with Shiny</a></li>
+<li class="chapter" data-level="4.0.5" data-path="getting-started-with-r-and-shiny.html"><a href="getting-started-with-r-and-shiny.html#build-your-own-shiny-app-and-put-it-on-github"><i class="fa fa-check"></i><b>4.0.5</b> Build your own Shiny app and put it on GitHub!</a></li>
+<li class="chapter" data-level="4.0.6" data-path="getting-started-with-r-and-shiny.html"><a href="getting-started-with-r-and-shiny.html#full-books-on-shiny"><i class="fa fa-check"></i><b>4.0.6</b> Full Books on Shiny</a></li>
+<li class="chapter" data-level="4.0.7" data-path="getting-started-with-r-and-shiny.html"><a href="getting-started-with-r-and-shiny.html#want-more"><i class="fa fa-check"></i><b>4.0.7</b> Want More?</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">R Shiny Training Resources</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="r-setup-guide" class="section level1" number="3">
+<h1><span class="header-section-number">Chapter 3</span> R Setup Guide</h1>
+<p><img src="../man/figures/rstudio_logo.png" style="background:none; border:none; box-shadow:none;"></p>
+<hr />
+<p>Author: Jimmy Briggs<br />
+Date: June 2, 2020</p>
+<hr />
+<p>The purpose of this guide is to provide an in-depth walkthrough of the
+various tasks, installations, and processes involved with setting up your
+machine for using R.</p>
+<div id="installing-r-rstudio" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Installing R &amp; RStudio</h2>
+<p>The first step is to install R and RStudio from their respective websites listed below.</p>
+</div>
+<div id="download-r" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> Download R</h2>
+<p>Install R from the main CRAN (Comprehensive R Archive Network) website:
+<a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a>.</p>
+<ul>
+<li><p>On the page, select “Download R for Windows” &gt; “Base” &gt; “Download R 4.0.0 for Windows”</p></li>
+<li><p>Note as of today the latest R version is 4.0.0</p></li>
+<li><p>During installation, ensure that you are installing the 64-bit architecture
+version of R for increased RAM.</p></li>
+</ul>
+<div id="additional-notes-on-r" class="section level3" number="3.2.1">
+<h3><span class="header-section-number">3.2.1</span> Additional Notes on R</h3>
+<ul>
+<li><p>CRAN is composed of a set of mirror servers distributed around the world and
+is used to distribute R and R packages.</p></li>
+<li><p>Don’t try and pick a mirror that’s close to you: instead use the cloud mirror,
+<a href="https://cloud.r-project.org" class="uri">https://cloud.r-project.org</a>, which automatically figures it out for you.</p></li>
+<li><p>A new major version of R comes out once a year, and there are 2-3 minor
+releases each year. It’s a good idea to update regularly.</p></li>
+<li><p>Upgrading can be a bit of a hassle, especially for major versions, which
+require you to re-install all your packages, but putting it off only makes it
+worse.</p></li>
+</ul>
+<p>For more details see the section discussing how to efficiently migrate R
+packages between versions in this guide.</p>
+<ul>
+<li>To ease the process up updating your R version it is helpful to use the
+<code>installr</code> packge via <code>installr::updateR()</code> (run this from the native R
+console not RStudio).</li>
+</ul>
+</div>
+</div>
+<div id="download-rstudio" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> Download RStudio</h2>
+<p>Install the free Version of RStudio Desktop for Windows from the RStudio Website here: <a href="https://rstudio.com/products/rstudio/download/" class="uri">https://rstudio.com/products/rstudio/download/</a>.</p>
+<div id="additional-notes-on-rstudio" class="section level3" number="3.3.1">
+<h3><span class="header-section-number">3.3.1</span> Additional Notes on RStudio</h3>
+<ul>
+<li><p>RStudio is an integrated development environment, or IDE, for R programming.</p></li>
+<li><p>RStudio is updated a couple of times a year. When a new version is available,
+RStudio will let you know.</p></li>
+<li><p>It’s a good idea to upgrade regularly so you can take advantage of the latest
+and greatest features.</p></li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="configure-rstudio-settings" class="section level2" number="3.4">
+<h2><span class="header-section-number">3.4</span> Configure RStudio Settings</h2>
+<p>A range of Project Options and Global Options are available in RStudio from the Tools menu (accessible from the keyboard via Alt+T).</p>
+<p>Most of these are self-explanatory but it is worth mentioning a few that can boost
+your programming efficiency:</p>
+<ul>
+<li>I highly recommend unticking the default “Restore .RData” settings box:</li>
+</ul>
+<center>
+<p><img src="../man/figures/rstudio-settings.png" style="background:none; border:none; box-shadow:none;"></p>
+<p><em>Unticking this default prevents loading previously created R objects. This will make starting R quicker and reduce the chance of getting bugs due to previously created objects. For this reason, I recommend you untick this box.</em></p>
+</center>
+<p>Alternatively you can simply run this code:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="r-setup-guide.html#cb7-1"></a><span class="kw">require</span>(usethis)</span>
+<span id="cb7-2"><a href="r-setup-guide.html#cb7-2"></a>usethis<span class="op">::</span><span class="kw">use_blank_slate</span>(<span class="dt">scope =</span> <span class="st">&quot;user&quot;</span>)</span></code></pre></div>
+<p><em>See <code>code{?usethis::use_blank_slate</code> for more information.</em></p>
+<ul>
+<li><p>GIT/SVN project settings allow RStudio to provide a graphical
+interface to your version control system.</p></li>
+<li><p>R version settings allow RStudio to ‘point’ to different R
+versions/interpreters, which may be faster for some projects.</p></li>
+<li><p>Code editing options can make RStudio adapt to your coding style, for example,
+by preventing the autocompletion of braces, which some experienced programmers
+may find annoying. Enabling Vim mode makes RStudio act as a (partial) Vim emulator.</p></li>
+<li><p>Diagnostic settings can make RStudio more efficient by adding additional
+diagnostics or by removing diagnostics if they are slowing down your work.
+This may be an issue for people using RStudio to analyze large datasets on older
+low-spec computers.</p></li>
+<li><p>Appearance: if you are struggling to see the source code, changing the default
+font size may make you a more efficient programmer by reducing the time overheads
+associated with squinting at the screen. Other options in this area relate more
+to aesthetics. Settings such as font type and background color are also important
+because feeling comfortable in your programming environment can boost productivity.
+Go to Tools &gt; Global Options to modify these.</p></li>
+</ul>
+</div>
+<div id="installing-and-setting-up-additional-software-and-utilities" class="section level2" number="3.5">
+<h2><span class="header-section-number">3.5</span> Installing and Setting Up Additional Software and Utilities</h2>
+<p>To get the most out of R and RStudio it is helpful to install these additional
+software resources:</p>
+<ul>
+<li><p>RTools</p></li>
+<li><p>Git</p></li>
+<li><p>A Git Client GUI (or just use RStudio)</p></li>
+<li><p>Git LFS</p></li>
+<li><p>Mercurial</p></li>
+<li><p>Tex Distribution</p>
+<ul>
+<li>Tinytex</li>
+<li>Miketex</li>
+<li>TexLive</li>
+</ul></li>
+<li><p>Java</p></li>
+<li><p>Pandoc</p></li>
+<li><p>Node.js</p></li>
+<li><p>Hugo</p></li>
+<li><p>Inno</p></li>
+</ul>
+<p>Here’s the code to install these additional resources:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="r-setup-guide.html#cb8-1"></a></span>
+<span id="cb8-2"><a href="r-setup-guide.html#cb8-2"></a><span class="cf">if</span> (<span class="op">!</span><span class="kw">require</span>(pacman)) <span class="kw">install.packages</span>(<span class="st">&quot;pacman&quot;</span>)</span>
+<span id="cb8-3"><a href="r-setup-guide.html#cb8-3"></a></span>
+<span id="cb8-4"><a href="r-setup-guide.html#cb8-4"></a>pacman<span class="op">::</span><span class="kw">p_load</span>(devtools, </span>
+<span id="cb8-5"><a href="r-setup-guide.html#cb8-5"></a>               installr, </span>
+<span id="cb8-6"><a href="r-setup-guide.html#cb8-6"></a>               tinytex, </span>
+<span id="cb8-7"><a href="r-setup-guide.html#cb8-7"></a>               rstudioapi, </span>
+<span id="cb8-8"><a href="r-setup-guide.html#cb8-8"></a>               magrittr,</span>
+<span id="cb8-9"><a href="r-setup-guide.html#cb8-9"></a>               dplyr,</span>
+<span id="cb8-10"><a href="r-setup-guide.html#cb8-10"></a>               pkgbuild)</span>
+<span id="cb8-11"><a href="r-setup-guide.html#cb8-11"></a></span>
+<span id="cb8-12"><a href="r-setup-guide.html#cb8-12"></a><span class="co"># configure RStudio settings ----------------------------------------------</span></span>
+<span id="cb8-13"><a href="r-setup-guide.html#cb8-13"></a></span>
+<span id="cb8-14"><a href="r-setup-guide.html#cb8-14"></a><span class="co"># disable reloading of workspace between sessions</span></span>
+<span id="cb8-15"><a href="r-setup-guide.html#cb8-15"></a>usethis<span class="op">::</span><span class="kw">use_blank_slate</span>(<span class="dt">scope =</span> <span class="st">&quot;user&quot;</span>)</span>
+<span id="cb8-16"><a href="r-setup-guide.html#cb8-16"></a></span>
+<span id="cb8-17"><a href="r-setup-guide.html#cb8-17"></a><span class="co"># review system environment variables:</span></span>
+<span id="cb8-18"><a href="r-setup-guide.html#cb8-18"></a><span class="kw">Sys.getenv</span>()</span>
+<span id="cb8-19"><a href="r-setup-guide.html#cb8-19"></a></span>
+<span id="cb8-20"><a href="r-setup-guide.html#cb8-20"></a><span class="co"># configure your R library path for R packages</span></span>
+<span id="cb8-21"><a href="r-setup-guide.html#cb8-21"></a><span class="kw">.libPaths</span>()</span>
+<span id="cb8-22"><a href="r-setup-guide.html#cb8-22"></a></span>
+<span id="cb8-23"><a href="r-setup-guide.html#cb8-23"></a><span class="co"># copy packages to new R-version&#39;s windows library</span></span>
+<span id="cb8-24"><a href="r-setup-guide.html#cb8-24"></a>libdir_prior &lt;-<span class="st"> </span><span class="kw">file.path</span>(<span class="st">&quot;&lt;enter prior win-library path here&gt;&quot;</span>)</span>
+<span id="cb8-25"><a href="r-setup-guide.html#cb8-25"></a>libdir_current &lt;-<span class="st"> </span><span class="kw">file.path</span>(<span class="st">&quot;&lt;enter current win-library path here&gt;&quot;</span>)</span>
+<span id="cb8-26"><a href="r-setup-guide.html#cb8-26"></a>installr<span class="op">::</span><span class="kw">copy.packages.between.libraries</span>(</span>
+<span id="cb8-27"><a href="r-setup-guide.html#cb8-27"></a>  <span class="dt">from =</span> libdir_prior, <span class="dt">to =</span> libdir_current</span>
+<span id="cb8-28"><a href="r-setup-guide.html#cb8-28"></a>)</span>
+<span id="cb8-29"><a href="r-setup-guide.html#cb8-29"></a></span>
+<span id="cb8-30"><a href="r-setup-guide.html#cb8-30"></a><span class="co"># check</span></span>
+<span id="cb8-31"><a href="r-setup-guide.html#cb8-31"></a><span class="kw">.libPaths</span>()[<span class="dv">1</span>] <span class="op">==</span><span class="st"> </span>libdir </span>
+<span id="cb8-32"><a href="r-setup-guide.html#cb8-32"></a></span>
+<span id="cb8-33"><a href="r-setup-guide.html#cb8-33"></a><span class="co"># configure dotfiles .Rprofile &amp; .Renvrion --------------------------------</span></span>
+<span id="cb8-34"><a href="r-setup-guide.html#cb8-34"></a></span>
+<span id="cb8-35"><a href="r-setup-guide.html#cb8-35"></a><span class="co"># review dotfiles</span></span>
+<span id="cb8-36"><a href="r-setup-guide.html#cb8-36"></a>usethis<span class="op">::</span><span class="kw">edit_r_environ</span>(<span class="dt">scope =</span> <span class="st">&quot;user&quot;</span>) <span class="co"># (RTools Path, github PAT, keys, etc.)</span></span>
+<span id="cb8-37"><a href="r-setup-guide.html#cb8-37"></a>usethis<span class="op">::</span><span class="kw">edit_r_profile</span>(<span class="dt">scope =</span> <span class="st">&quot;user&quot;</span>) <span class="co"># (various options for packages)</span></span>
+<span id="cb8-38"><a href="r-setup-guide.html#cb8-38"></a></span>
+<span id="cb8-39"><a href="r-setup-guide.html#cb8-39"></a><span class="co"># additional software ---------------------------------------------</span></span>
+<span id="cb8-40"><a href="r-setup-guide.html#cb8-40"></a>pkgbuild<span class="op">::</span><span class="kw">setup_rtools</span>()</span>
+<span id="cb8-41"><a href="r-setup-guide.html#cb8-41"></a></span>
+<span id="cb8-42"><a href="r-setup-guide.html#cb8-42"></a><span class="co"># Rtools</span></span>
+<span id="cb8-43"><a href="r-setup-guide.html#cb8-43"></a>installr<span class="op">::</span><span class="kw">install.rtools</span>()</span>
+<span id="cb8-44"><a href="r-setup-guide.html#cb8-44"></a>rstudioapi<span class="op">::</span><span class="kw">restartSession</span>()</span>
+<span id="cb8-45"><a href="r-setup-guide.html#cb8-45"></a></span>
+<span id="cb8-46"><a href="r-setup-guide.html#cb8-46"></a><span class="co"># git</span></span>
+<span id="cb8-47"><a href="r-setup-guide.html#cb8-47"></a>installr<span class="op">::</span><span class="kw">install.git</span>()</span>
+<span id="cb8-48"><a href="r-setup-guide.html#cb8-48"></a>rstudioapi<span class="op">::</span><span class="kw">restartSession</span>()</span>
+<span id="cb8-49"><a href="r-setup-guide.html#cb8-49"></a></span>
+<span id="cb8-50"><a href="r-setup-guide.html#cb8-50"></a><span class="co"># tinytex</span></span>
+<span id="cb8-51"><a href="r-setup-guide.html#cb8-51"></a>tinytex<span class="op">::</span><span class="kw">install_tinytex</span>()</span>
+<span id="cb8-52"><a href="r-setup-guide.html#cb8-52"></a>rstudioapi<span class="op">::</span><span class="kw">restartSession</span>()</span>
+<span id="cb8-53"><a href="r-setup-guide.html#cb8-53"></a>tinytex<span class="op">::</span><span class="kw">use_tinytex</span>()</span>
+<span id="cb8-54"><a href="r-setup-guide.html#cb8-54"></a></span>
+<span id="cb8-55"><a href="r-setup-guide.html#cb8-55"></a><span class="co"># java</span></span>
+<span id="cb8-56"><a href="r-setup-guide.html#cb8-56"></a>installr<span class="op">::</span><span class="kw">install.java</span>()</span>
+<span id="cb8-57"><a href="r-setup-guide.html#cb8-57"></a></span>
+<span id="cb8-58"><a href="r-setup-guide.html#cb8-58"></a><span class="co"># pandoc</span></span>
+<span id="cb8-59"><a href="r-setup-guide.html#cb8-59"></a>installr<span class="op">::</span><span class="kw">install.pandoc</span>()</span>
+<span id="cb8-60"><a href="r-setup-guide.html#cb8-60"></a></span>
+<span id="cb8-61"><a href="r-setup-guide.html#cb8-61"></a><span class="co"># node.js (only if desired)</span></span>
+<span id="cb8-62"><a href="r-setup-guide.html#cb8-62"></a>installr<span class="op">::</span><span class="kw">install.nodejs</span>()</span>
+<span id="cb8-63"><a href="r-setup-guide.html#cb8-63"></a></span>
+<span id="cb8-64"><a href="r-setup-guide.html#cb8-64"></a><span class="co"># github Git Client (only if desired)</span></span>
+<span id="cb8-65"><a href="r-setup-guide.html#cb8-65"></a>installr<span class="op">::</span><span class="kw">install.github</span>()</span>
+<span id="cb8-66"><a href="r-setup-guide.html#cb8-66"></a></span>
+<span id="cb8-67"><a href="r-setup-guide.html#cb8-67"></a><span class="co"># inno (only if desired)</span></span>
+<span id="cb8-68"><a href="r-setup-guide.html#cb8-68"></a>installr<span class="op">::</span><span class="kw">install.inno</span>()</span></code></pre></div>
+<p>Note that not all of these are required, however, I recommend at a minimum to
+install RTools, Git, Pandoc, and a Latex service.</p>
+<p>I have provided an R script named R-Setup-Script.R with this guide that uses the
+<code>installr</code> package to help ease the process of installing all these extra
+resources.</p>
+</div>
+<div id="advanced-configuration" class="section level2" number="3.6">
+<h2><span class="header-section-number">3.6</span> Advanced Configuration</h2>
+<p>This section discusses more advanced R related configurations such as:</p>
+<ul>
+<li>Environment Paths</li>
+<li>Detailed System Information</li>
+<li>Dotfiles</li>
+<li>Common pitfalls</li>
+</ul>
+<p>For more advanced R developers you may want to further configure your development
+environement by customizing you R related dotfiles;
+specifically, your <em>.Rprofile</em> and <em>.Renviron</em>.</p>
+<p>Here is what my minimal setup includes:</p>
+<p>Additionally, you can configure keybinding for RStudio addins from RStudio and
+store them within the .R folder located in your <em>R_USER</em> path. To view
+this path run <code>Sys.getenv("R_USER")</code>.</p>
+<p>On a windows computer, you may need to adjust where the system chooses to look
+for various R related items on your system. For example, the path to your RTools
+bin executable, your HOME path, your library path for packages,
+and many other windows specific paths. Note the difference between
+SYSTEM PATHS and USER PATHS.</p>
+<p>To add your system RTOOLS PATH to your .Renviron
+(easier than manually configuring within windows system settings) run the code:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="r-setup-guide.html#cb9-1"></a><span class="kw">cat</span>(<span class="st">&#39;PATH = ${RTOOLS40_HOME}</span><span class="ch">\\</span><span class="st">usr</span><span class="ch">\\</span><span class="st">bin;${PATH}&#39;</span>,</span>
+<span id="cb9-2"><a href="r-setup-guide.html#cb9-2"></a>    <span class="dt">file =</span> fs<span class="op">::</span><span class="kw">path</span>(<span class="kw">Sys.getenv</span>(<span class="st">&quot;R_USER&quot;</span>), <span class="st">&quot;/.Renviron&quot;</span>), </span>
+<span id="cb9-3"><a href="r-setup-guide.html#cb9-3"></a>    <span class="dt">append =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
+<p>YOu can also view the allocated memory RAM your machine allows R to use by
+running <code>forgot the function..</code>.</p>
+
+<p><img src="../man/figures/shiny_logo.png" height = "120" style="background:none; border:none; box-shadow:none;"></p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="r-bookdowns-list.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="getting-started-with-r-and-shiny.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

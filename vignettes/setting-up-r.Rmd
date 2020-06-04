@@ -1,5 +1,5 @@
 ---
-pagetitle: "Setting up R and RStudio"
+title: "R Setup Guide"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{setting-up-r}
@@ -27,7 +27,7 @@ knitr::opts_chunk$set(
 Author: Jimmy Briggs  
 Date: June 2, 2020
 
-</center>
+<center/>
 
 ***
 

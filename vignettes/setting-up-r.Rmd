@@ -2,7 +2,11 @@
 pagetitle: "Setting up R and RStudio"
 output: rmarkdown::html_vignette
 vignette: >
+<<<<<<< Updated upstream
   %\VignetteIndexEntry{Setting up R and RStudio}
+=======
+  %\VignetteIndexEntry{R Setup Guide}
+>>>>>>> Stashed changes
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---

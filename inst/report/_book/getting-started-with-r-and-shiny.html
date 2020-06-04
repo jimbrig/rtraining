@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>R Shiny Training Resources</title>
+  <meta name="description" content="R Training Resources, Guides, Tips, and Knowledge Base." />
+  <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="R Shiny Training Resources" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="R Training Resources, Guides, Tips, and Knowledge Base." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="R Shiny Training Resources" />
+  
+  <meta name="twitter:description" content="R Training Resources, Guides, Tips, and Knowledge Base." />
+  
+
+<meta name="author" content="Yihui Xie" />
+
+
+<meta name="date" content="2020-06-04" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+
+<script src="libs/header-attrs-2.2/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="0.1" data-path="shiny-training.html"><a href="#installing-r-rstudio"><i class="fa fa-check"></i><b>0.1</b> Installing R &amp; RStudio</a></li>
+<li class="chapter" data-level="0.2" data-path="shiny-training.html"><a href="#download-r"><i class="fa fa-check"></i><b>0.2</b> Download R</a>
+<ul>
+<li class="chapter" data-level="0.2.1" data-path="shiny-training.html"><a href="#additional-notes-on-r"><i class="fa fa-check"></i><b>0.2.1</b> Additional Notes on R</a></li>
+</ul></li>
+<li class="chapter" data-level="0.3" data-path="shiny-training.html"><a href="#download-rstudio"><i class="fa fa-check"></i><b>0.3</b> Download RStudio</a>
+<ul>
+<li class="chapter" data-level="0.3.1" data-path="shiny-training.html"><a href="#additional-notes-on-rstudio"><i class="fa fa-check"></i><b>0.3.1</b> Additional Notes on RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="0.4" data-path="shiny-training.html"><a href="#configure-rstudio-settings"><i class="fa fa-check"></i><b>0.4</b> Configure RStudio Settings</a></li>
+<li class="chapter" data-level="0.5" data-path="shiny-training.html"><a href="#installing-and-setting-up-additional-software-and-utilities"><i class="fa fa-check"></i><b>0.5</b> Installing and Setting Up Additional Software and Utilities</a></li>
+<li class="chapter" data-level="0.6" data-path="shiny-training.html"><a href="#advanced-configuration"><i class="fa fa-check"></i><b>0.6</b> Advanced Configuration</a></li>
+<li class="chapter" data-level="1" data-path="shiny-training.html"><a href="#getting-started-with-r-and-shiny"><i class="fa fa-check"></i><b>1</b> Getting Started with R and Shiny</a>
+<ul>
+<li class="chapter" data-level="1.0.1" data-path="shiny-training.html"><a href="#getting-stated-with-r"><i class="fa fa-check"></i><b>1.0.1</b> Getting Stated with R</a></li>
+<li class="chapter" data-level="1.0.2" data-path="shiny-training.html"><a href="#getting-started-with-github"><i class="fa fa-check"></i><b>1.0.2</b> Getting Started with GitHub</a></li>
+<li class="chapter" data-level="1.0.3" data-path="shiny-training.html"><a href="#a-deeper-dive-into-r"><i class="fa fa-check"></i><b>1.0.3</b> A Deeper Dive into R</a></li>
+<li class="chapter" data-level="1.0.4" data-path="shiny-training.html"><a href="#getting-started-with-shiny"><i class="fa fa-check"></i><b>1.0.4</b> Getting Started with Shiny</a></li>
+<li class="chapter" data-level="1.0.5" data-path="shiny-training.html"><a href="#build-your-own-shiny-app-and-put-it-on-github"><i class="fa fa-check"></i><b>1.0.5</b> Build your own Shiny app and put it on GitHub!</a></li>
+<li class="chapter" data-level="1.0.6" data-path="shiny-training.html"><a href="#full-books-on-shiny"><i class="fa fa-check"></i><b>1.0.6</b> Full Books on Shiny</a></li>
+<li class="chapter" data-level="1.0.7" data-path="shiny-training.html"><a href="#want-more"><i class="fa fa-check"></i><b>1.0.7</b> Want More?</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">R Shiny Training Resources</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">R Shiny Training Resources</h1>
+<p class="author"><em>Yihui Xie</em></p>
+<p class="date"><em>2020-06-04</em></p>
+</div>
+<div id="getting-started-with-r-and-shiny" class="section level1" number="1">
+<h1><span class="header-section-number">Chapter 1</span> Getting Started with R and Shiny</h1>
+<p>Below is a collection of resources for getting started in R and Shiny.</p>
+<p>They are listed roughly in the order that I would expect a motivated beginner
+to work through them.</p>
+<div id="getting-stated-with-r" class="section level3" number="1.0.1">
+<h3><span class="header-section-number">1.0.1</span> Getting Stated with R</h3>
+<ul>
+<li>Download R here: <a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a></li>
+<li>Download the free version of Rstudio here: <a href="https://www.rstudio.com/products/rstudio/download/" class="uri">https://www.rstudio.com/products/rstudio/download/</a></li>
+<li>Getting Started with R: <a href="https://rladiessydney.org/courses/ryouwithme/" class="uri">https://rladiessydney.org/courses/ryouwithme/</a></li>
+<li>R4DS: <a href="https://r4ds.had.co.nz/" class="uri">https://r4ds.had.co.nz/</a>
+<ul>
+<li>note: I recommend skimming through the above book and trying out examples.
+Skip over sections that you do not understand, and you can come back to them
+later.</li>
+</ul></li>
+</ul>
+<p><em>For a more in-depth walkthrough of setting up R see the <a href="https://jimbrig.github.io/rtraining/articles/setting-up-r.html">R Setup Guide</a> vignette</em></p>
+</div>
+<div id="getting-started-with-github" class="section level3" number="1.0.2">
+<h3><span class="header-section-number">1.0.2</span> Getting Started with GitHub</h3>
+<ul>
+<li>Create a GitHub account: <a href="https://github.com/" class="uri">https://github.com/</a> . You may need to install git first from here: <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git" class="uri">https://git-scm.com/book/en/v2/Getting-Started-Installing-Git</a></li>
+<li>If you are not familiar with git, this article gives a nice overview: <a href="https://jahya.net/blog/git-vs-github/" class="uri">https://jahya.net/blog/git-vs-github/</a></li>
+<li>Try out example 1 from this tutorial: <a href="https://github.com/bcgov/bcgov-data-science-resources/wiki/Tutorial:-Intro-to-Git-&amp;-GitHub-for-the-R-User" class="uri">https://github.com/bcgov/bcgov-data-science-resources/wiki/Tutorial:-Intro-to-Git-&amp;-GitHub-for-the-R-User</a></li>
+</ul>
+</div>
+<div id="a-deeper-dive-into-r" class="section level3" number="1.0.3">
+<h3><span class="header-section-number">1.0.3</span> A Deeper Dive into R</h3>
+<ul>
+<li>Fundamental chapters in Advanced R
+<ul>
+<li><a href="http://adv-r.had.co.nz/Data-structures.html" class="uri">http://adv-r.had.co.nz/Data-structures.html</a></li>
+<li><a href="http://adv-r.had.co.nz/Subsetting.html" class="uri">http://adv-r.had.co.nz/Subsetting.html</a></li>
+<li><a href="http://adv-r.had.co.nz/Style.html" class="uri">http://adv-r.had.co.nz/Style.html</a></li>
+</ul></li>
+<li>Introduction to the dplyr package for data manipulation: <a href="https://cran.r-project.org/web/packages/dplyr/vignettes/dplyr.html" class="uri">https://cran.r-project.org/web/packages/dplyr/vignettes/dplyr.html</a></li>
+</ul>
+</div>
+<div id="getting-started-with-shiny" class="section level3" number="1.0.4">
+<h3><span class="header-section-number">1.0.4</span> Getting Started with Shiny</h3>
+<p>What is Shiny from Rstudio:
+&gt; Shiny is an open source R package that provides an elegant and powerful web framework for building web applications using R. Shiny helps you turn your analyses into interactive web applications without requiring HTML, CSS, or JavaScript knowledge.</p>
+<ul>
+<li>Into to Shiny book: <a href="https://laderast.github.io/gradual_shiny/" class="uri">https://laderast.github.io/gradual_shiny/</a></li>
+<li>Another Intro to Shiny book: <a href="https://ourcodingclub.github.io/2017/03/07/shiny.html" class="uri">https://ourcodingclub.github.io/2017/03/07/shiny.html</a></li>
+<li>Video on the basics of web development: <a href="https://www.youtube.com/watch?v=FXqTHsPaY0A" class="uri">https://www.youtube.com/watch?v=FXqTHsPaY0A</a></li>
+<li>Shiny basics: <a href="https://shiny.rstudio.com/articles/basics.html" class="uri">https://shiny.rstudio.com/articles/basics.html</a></li>
+<li>More Shiny basics: <a href="https://deanattali.com/blog/building-shiny-apps-tutorial/" class="uri">https://deanattali.com/blog/building-shiny-apps-tutorial/</a> (Dean Attali, the author of this tutorial is one of my clients)</li>
+<li>Articles on Shiny: <a href="https://shiny.rstudio.com/articles/" class="uri">https://shiny.rstudio.com/articles/</a></li>
+</ul>
+</div>
+<div id="build-your-own-shiny-app-and-put-it-on-github" class="section level3" number="1.0.5">
+<h3><span class="header-section-number">1.0.5</span> Build your own Shiny app and put it on GitHub!</h3>
+</div>
+<div id="full-books-on-shiny" class="section level3" number="1.0.6">
+<h3><span class="header-section-number">1.0.6</span> Full Books on Shiny</h3>
+<ul>
+<li>Mastering Shiny: <a href="https://github.com/hadley/mastering-shiny" class="uri">https://github.com/hadley/mastering-shiny</a></li>
+<li>Engineering Production-Grade Shiny Apps: <a href="https://thinkr-open.github.io/building-shiny-apps-workflow/index.html" class="uri">https://thinkr-open.github.io/building-shiny-apps-workflow/index.html</a></li>
+</ul>
+</div>
+<div id="want-more" class="section level3" number="1.0.7">
+<h3><span class="header-section-number">1.0.7</span> Want More?</h3>
+<p>Here’s some more resources gathered from a colleagues recent RShiny learning path:</p>
+<ul>
+<li><p>basic overview of R in two hour video: <a href="https://www.youtube.com/watch?v=_V8eKsto3Ug&amp;list=PLWKjhJtqVAblQe2CCWqV4Zy3LY01Z8aF1&amp;index=5&amp;t=6791s" class="uri">https://www.youtube.com/watch?v=_V8eKsto3Ug&amp;list=PLWKjhJtqVAblQe2CCWqV4Zy3LY01Z8aF1&amp;index=5&amp;t=6791s</a></p></li>
+<li><p>basic overview of shiny web apps(I found it particularly helpful to follow along with the “<a href="https://shiny.rstudio.com/images/shiny-cheatsheet.pdf" class="uri">https://shiny.rstudio.com/images/shiny-cheatsheet.pdf</a>”): <a href="https://vimeo.com/rstudioinc/review/131218530/212d8a5a7a/#t=43m32s" class="uri">https://vimeo.com/rstudioinc/review/131218530/212d8a5a7a/#t=43m32s</a></p></li>
+<li><p>overview of rstudio IDE and github interactions Part 1 and Part 2 -</p>
+<ul>
+<li><a href="https://resources.rstudio.com/wistia-rstudio-essentials-2/rstudioessentialsmanagingpart1-2" class="uri">https://resources.rstudio.com/wistia-rstudio-essentials-2/rstudioessentialsmanagingpart1-2</a></li>
+<li><a href="https://resources.rstudio.com/wistia-rstudio-essentials-2/rstudioessentialsmanagingpart2-2" class="uri">https://resources.rstudio.com/wistia-rstudio-essentials-2/rstudioessentialsmanagingpart2-2</a></li>
+</ul></li>
+<li><p>useful R for data science chapters:</p>
+<ul>
+<li>workflow:basics link: <a href="https://r4ds.had.co.nz/workflow-basics.html" class="uri">https://r4ds.had.co.nz/workflow-basics.html</a></li>
+<li>workflow:projects link: <a href="https://r4ds.had.co.nz/workflow-projects.html" class="uri">https://r4ds.had.co.nz/workflow-projects.html</a></li>
+<li>tibbles link: <a href="https://r4ds.had.co.nz/tibbles.html" class="uri">https://r4ds.had.co.nz/tibbles.html</a></li>
+<li>tidy data link: <a href="https://r4ds.had.co.nz/tidy-data.html" class="uri">https://r4ds.had.co.nz/tidy-data.html</a></li>
+<li>functions link: <a href="https://r4ds.had.co.nz/functions.html" class="uri">https://r4ds.had.co.nz/functions.html</a></li>
+<li>vectors link:<a href="https://r4ds.had.co.nz/vectors.html" class="uri">https://r4ds.had.co.nz/vectors.html</a></li>
+<li>iterations with purr link: <a href="https://r4ds.had.co.nz/iteration.html" class="uri">https://r4ds.had.co.nz/iteration.html</a></li>
+</ul></li>
+<li><p>learn about dplyr package for data manipulation: <a href="https://cran.r-project.org/web/packages/dplyr/vignettes/dplyr.html" class="uri">https://cran.r-project.org/web/packages/dplyr/vignettes/dplyr.html</a></p></li>
+<li><p>learn about shiny dashboards: <a href="http://rstudio.github.io/shinydashboard/" class="uri">http://rstudio.github.io/shinydashboard/</a></p></li>
+<li><p>list of cheats sheats and resources found here: <a href="https://resources.rstudio.com/" class="uri">https://resources.rstudio.com/</a></p></li>
+<li><p>highcharter API for rich graphics and charts: <a href="http://jkunst.com/highcharter/highcharts-api.html" class="uri">http://jkunst.com/highcharter/highcharts-api.html</a></p></li>
+<li><p>Article on Databases: <a href="https://shiny.rstudio.com/articles/persistent-data-storage.html" class="uri">https://shiny.rstudio.com/articles/persistent-data-storage.html</a></p></li>
+</ul>
+<p>Built in tutorials for packages can be accessed through the learnr package.
+For example if you library learnr and tidyverse, the top right panel of RStudio can display a walk through of different functions in the tidyverse package. Blog post describing package: <a href="https://blog.rstudio.com/2020/02/25/rstudio-1-3-integrated-tutorials/" class="uri">https://blog.rstudio.com/2020/02/25/rstudio-1-3-integrated-tutorials/</a></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

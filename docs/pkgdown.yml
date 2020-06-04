@@ -2,6 +2,8 @@ pandoc: 2.9.2.1
 pkgdown: 1.5.1
 pkgdown_sha: ~
 articles:
+  bookdown-list: bookdown-list.html
   setting-up-r: setting-up-r.html
-last_built: 2020-06-04T02:51Z
+  shiny-training: shiny-training.html
+last_built: 2020-06-04T16:04Z
 

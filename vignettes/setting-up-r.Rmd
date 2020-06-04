@@ -2,7 +2,7 @@
 title: "R Setup Guide"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{setting-up-r}
+  %\VignetteIndexEntry{R Setup Guide}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -19,15 +19,12 @@ knitr::opts_chunk$set(
 )
 ```
 
-<center>
-
 <img src="../man/figures/rstudio_logo.png" style="background:none; border:none; box-shadow:none;">
 
-# R SETUP GUIDE
+***
+
 Author: Jimmy Briggs  
 Date: June 2, 2020
-
-<center/>
 
 ***
 

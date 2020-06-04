@@ -103,6 +103,7 @@ desc::desc_normalize()
 usethis::use_package("pkgdown", type = "suggests")
 usethis::use_package("attachment", type = "suggests")
 usethis::use_package("xfun")
+usethis::use_package("bookdown")
 
 # data --------------------------------------------------------------------
 
@@ -177,6 +178,9 @@ devtools::release()
 chameleon::create_book()
 chameleon::build_book()
 chameleon::build_pkgdown()
+
+pkgdown::clean_site()
+pkgdown::build_site()
 
 chameleon::open_pkgdown_function()
 chameleon::create_pkg_desc_file(out.dir = ".")

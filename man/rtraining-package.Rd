@@ -4,9 +4,11 @@
 \name{rtraining-package}
 \alias{rtraining}
 \alias{rtraining-package}
-\title{rtraining: What the Package Does (One Line, Title Case)}
+\title{rtraining: R Training Resources, Guides, Tips, and Knowledge Base}
 \description{
-What the package does (one paragraph).
+\if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
+
+Houses variouse material realted to teaching R.
 }
 \author{
 \strong{Maintainer}: Jimmy Briggs \email{jimmy.briggs@oliverwyman.com}

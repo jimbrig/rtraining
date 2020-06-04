@@ -5,6 +5,8 @@
 
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![Project Status:
+WIP](https://www.repostatus.org/badges/latest/wip.svg)](http://www.repostatus.org/#wip)
 <!-- badges: end -->
 
 The goal of `rtraining` is to provide useful resources, knowledge, and

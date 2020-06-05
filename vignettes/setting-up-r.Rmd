@@ -137,6 +137,25 @@ to aesthetics. Settings such as font type and background color are also importan
 because feeling comfortable in your programming environment can boost productivity.
 Go to Tools > Global Options to modify these.
 
+## Upgrading R
+
+Sometimes people run into difficulties whenever R updates its latest version. One 
+should be cautious whenever the *Major* patch version of R is upgraded (i.e. 
+from R3.6.1 to R4.0.0). 
+
+For minor patch updates (i.e. R3.6.3 to R3.7.0 or R3.6.4),
+it is usually a good idea to update your local version as these updates 
+incorporate bugfixes and speed enhancements. 
+
+On major updates, it is best practice to keep your old version of R on your machine
+until you are comfortable with the updated R version. 
+
+A very useful feature of RStudio is that **you can have multiple versions of R installed on your computer at the same time and by holding down the Control key during the launch of RStudio you can cause the R version selection dialog to display at startup**. 
+
+When migrating R versions between major patch updates, you will need to re-install 
+you library of R packages. This process can be vastly expedited utilizing installr's
+helpful `installr::copy.packages.between.libraries()` function.
+
 ## Installing and Setting Up Additional Software and Utilities
 
 To get the most out of R and RStudio it is helpful to install these additional
@@ -283,8 +302,22 @@ cat('PATH = ${RTOOLS40_HOME}\\usr\\bin;${PATH}',
     append = TRUE)
 ```
 
-YOu can also view the allocated memory RAM your machine allows R to use by 
-running `forgot the function..`.
+### Memory in R
+
+R breaks down memory usage into *Vcells* (memory used by vectors) and *Ncells*
+(memory used by everything else). 
+
+However, neither this distinction nor the "gc trigger" and "max used" columns 
+are typically important. What we're usually most interested in is the the 
+first column: the total memory used. 
+
+A helpful function one can use for this is `pryr::mem_used` which 
+wraps around gc() to return the total amount of memory (in megabytes) currently 
+used by R. `pryr::object_size()` is another helpful function which works similarly 
+to `utils::object.size()` but counts more accurately and includes the size of environments. `pryr::compare_size` makes it easy to compare the output of object_size and object.size.
+
+
+
 
 
 

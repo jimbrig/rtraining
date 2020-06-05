@@ -172,6 +172,15 @@ Date: June 2, 2020</p>
 <li><p>Appearance: if you are struggling to see the source code, changing the default font size may make you a more efficient programmer by reducing the time overheads associated with squinting at the screen. Other options in this area relate more to aesthetics. Settings such as font type and background color are also important because feeling comfortable in your programming environment can boost productivity. Go to Tools &gt; Global Options to modify these.</p></li>
 </ul>
 </div>
+<div id="upgrading-r" class="section level2">
+<h2 class="hasAnchor">
+<a href="#upgrading-r" class="anchor"></a>Upgrading R</h2>
+<p>Sometimes people run into difficulties whenever R updates its latest version. One should be cautious whenever the <em>Major</em> patch version of R is upgraded (i.e.  from R3.6.1 to R4.0.0).</p>
+<p>For minor patch updates (i.e. R3.6.3 to R3.7.0 or R3.6.4), it is usually a good idea to update your local version as these updates incorporate bugfixes and speed enhancements.</p>
+<p>On major updates, it is best practice to keep your old version of R on your machine until you are comfortable with the updated R version.</p>
+<p>A very useful feature of RStudio is that <strong>you can have multiple versions of R installed on your computer at the same time and by holding down the Control key during the launch of RStudio you can cause the R version selection dialog to display at startup</strong>.</p>
+<p>When migrating R versions between major patch updates, you will need to re-install you library of R packages. This process can be vastly expedited utilizing installr’s helpful <code><a href="https://rdrr.io/pkg/installr/man/copy.packages.between.libraries.html">installr::copy.packages.between.libraries()</a></code> function.</p>
+</div>
 <div id="installing-and-setting-up-additional-software-and-utilities" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installing-and-setting-up-additional-software-and-utilities" class="anchor"></a>Installing and Setting Up Additional Software and Utilities</h2>
@@ -286,7 +295,13 @@ Date: June 2, 2020</p>
 <div class="sourceCode" id="cb3"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/cat.html">cat</a></span>(<span class="st">'PATH = ${RTOOLS40_HOME}\\usr\\bin;${PATH}'</span>,
     <span class="kw">file</span> <span class="kw">=</span> <span class="kw pkg">fs</span><span class="kw ns">::</span><span class="fu"><a href="http://fs.r-lib.org/reference/path.html">path</a></span>(<span class="fu"><a href="https://rdrr.io/r/base/Sys.getenv.html">Sys.getenv</a></span>(<span class="st">"R_USER"</span>), <span class="st">"/.Renviron"</span>),
     <span class="kw">append</span> <span class="kw">=</span> <span class="fl">TRUE</span>)</pre></body></html></div>
-<p>YOu can also view the allocated memory RAM your machine allows R to use by running <code>forgot the function..</code>.</p>
+<div id="memory-in-r" class="section level3">
+<h3 class="hasAnchor">
+<a href="#memory-in-r" class="anchor"></a>Memory in R</h3>
+<p>R breaks down memory usage into <em>Vcells</em> (memory used by vectors) and <em>Ncells</em> (memory used by everything else).</p>
+<p>However, neither this distinction nor the “gc trigger” and “max used” columns are typically important. What we’re usually most interested in is the the first column: the total memory used.</p>
+<p>A helpful function one can use for this is <code><a href="https://rdrr.io/pkg/pryr/man/mem_used.html">pryr::mem_used</a></code> which wraps around gc() to return the total amount of memory (in megabytes) currently used by R. <code><a href="https://rdrr.io/pkg/pryr/man/object_size.html">pryr::object_size()</a></code> is another helpful function which works similarly to <code><a href="https://rdrr.io/r/utils/object.size.html">utils::object.size()</a></code> but counts more accurately and includes the size of environments. <code><a href="https://rdrr.io/pkg/pryr/man/object_size.html">pryr::compare_size</a></code> makes it easy to compare the output of object_size and object.size.</p>
+</div>
 </div>
 </div>
   </div>

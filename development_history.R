@@ -18,6 +18,9 @@ usethis::use_build_ignore("development_history.R")
 
 # package development libraries/dependencies
 if (!require(pacman)) install.packages("pacman")
+
+remotes::install_github("ThinkR-open/chameleon")
+
 pacman::p_load(
   usethis,
   devtools,
@@ -30,7 +33,8 @@ pacman::p_load(
   rmarkdown,
   desc,
   fs,
-  attachment
+  attachment,
+  chameleon
 )
 
 # package directory skeleton
@@ -94,6 +98,9 @@ desc::desc_set("Depends", "R (>= 2.10)")
 
 # license
 # I use my .Rprofile for this.
+
+# URLs
+usethis::use_github_links()
 
 # clean up
 desc::desc_normalize()

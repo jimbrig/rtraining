@@ -72,7 +72,14 @@
   </ul>
 </li>
       </ul>
-<ul class="nav navbar-nav navbar-right"></ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+  <a href="https://github.com/jimbrig/rtraining/">
+    <span class="fab fa fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
 </div>
 <!--/.nav-collapse -->
   </div>
@@ -90,6 +97,19 @@
 </h1></div>
 <!-- badges: start -->
 
+<div id="contents" class="section level3">
+<h3 class="hasAnchor">
+<a href="#contents" class="anchor"></a>Contents</h3>
+<ul>
+<li><a href="https://jimbrig.github.io/rtraining/">Package HomePage</a></li>
+<li><a href="https://jimbrig.github.io/rtraining/articles/setting-up-r.html">R Setup Guide</a></li>
+<li><a href="https://jimbrig.github.io/rtraining/articles/shiny-training.html">R Shiny Training Resources</a></li>
+<li><a href="https://jimbrig.github.io/rtraining/articles/bookdown-list.html">List of Helpful Bookdowns</a></li>
+</ul>
+<hr>
+<!-- description: start --><p>Package {rtraining}: R Training Resources, Guides, Tips, and Knowledge Base.<br>
+Current version is 0.0.1.</p>
+<hr>
 <p>The goal of <code>rtraining</code> is to provide useful resources, knowledge, and walkthroughs for new R developers.</p>
 <p>The package is split into three main areas:</p>
 <ol>
@@ -97,20 +117,56 @@
 <li><p>R Workflows: example workflows showcasing the main types of work done with R, including, but not limited to R Data Analysis Projects, Reporting with RMarkdown, R Shiny Applications, R Package Development.</p></li>
 <li><p>R Tips &amp; Tricks: General tips and tricks learned over time from my experiences with R.</p></li>
 </ol>
+<!-- description: end -->
+</div>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
+<!-- install: start -->
 <p>You can install the released version of rtraining from <a href="https://CRAN.R-project.org">CRAN</a> with:</p>
 <div class="sourceCode" id="cb1"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"rtraining"</span>)</pre></div>
 <p>And the development version from <a href="https://github.com/">GitHub</a> with:</p>
 <div class="sourceCode" id="cb2"><pre class="r"><span class="co"># install.packages("devtools")</span>
 <span class="kw pkg">devtools</span><span class="kw ns">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span>(<span class="st">"jimbrig/rtraining"</span>)</pre></div>
+<hr>
+<p>The list of dependencies required to install this package is: attachment, chameleon, devtools, knitr, pkgdown, rmarkdown, roxygen2, utils, xfun.</p>
+<p>To install the package, you can run the following script</p>
+<div class="sourceCode" id="cb3"><pre class="r"><span class="co"># install.packages("remotes")</span>
+<span class="kw pkg">remotes</span><span class="kw ns">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_local.html">install_local</a></span>(<span class="kw">path</span> <span class="kw">=</span> <span class="st">"rtraining_0.0.1.tar.gz"</span>)</pre></div>
+<p>In case something went wrong, you may want to install dependencies before using:</p>
+<div class="sourceCode" id="cb4"><pre class="r"><span class="co"># Remotes ----</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"remotes"</span>)
+<span class="kw pkg">remotes</span><span class="kw ns">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span>(<span class="st">'ThinkR-open/chameleon'</span>)
+<span class="co"># Attachments ----</span>
+<span class="no">to_install</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"xfun"</span>)
+  <span class="kw">for</span> (<span class="no">i</span> <span class="kw">in</span> <span class="no">to_install</span>) {
+    <span class="fu"><a href="https://rdrr.io/r/base/message.html">message</a></span>(<span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span>(<span class="st">"looking for "</span>, <span class="no">i</span>))
+    <span class="kw">if</span> (!<span class="fu"><a href="https://rdrr.io/r/base/ns-load.html">requireNamespace</a></span>(<span class="no">i</span>)) {
+      <span class="fu"><a href="https://rdrr.io/r/base/message.html">message</a></span>(<span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span>(<span class="st">"     installing"</span>, <span class="no">i</span>))
+      <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="no">i</span>)
+    }
+  }</pre></div>
+<p>Once you have the package installed you can open the website directly by running:</p>
+<div class="sourceCode" id="cb5"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">rtraining</span>)
+<span class="kw pkg">rtraining</span><span class="kw ns">::</span><span class="fu"><a href="reference/open_pkgdown.html">open_pkgdown</a></span>()</pre></div>
+<p>Similarly you can open the package <code>bookdown</code> with:</p>
+<div class="sourceCode" id="cb6"><pre class="r"><span class="kw pkg">rtraining</span><span class="kw ns">::</span><span class="fu"><a href="reference/open_guide.html">open_guide</a></span>()</pre></div>
+<!-- install: end -->
 </div>
 </div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
-    <div class="license">
+    <div class="links">
+<h2>Links</h2>
+<ul class="list-unstyled">
+<li>Browse source code at <br><a href="https://github.com/jimbrig/rtraining/">https://​github.com/​jimbrig/​rtraining/​</a>
+</li>
+<li>Report a bug at <br><a href="https://github.com/jimbrig/rtraining/issues">https://​github.com/​jimbrig/​rtraining/​issues</a>
+</li>
+</ul>
+</div>
+<div class="license">
 <h2>License</h2>
 <ul class="list-unstyled">
 <li>

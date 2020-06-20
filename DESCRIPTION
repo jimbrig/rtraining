@@ -31,3 +31,5 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.0
 Remotes: 
     ThinkR-open/chameleon
+URL: https://github.com/jimbrig/rtraining
+BugReports: https://github.com/jimbrig/rtraining/issues

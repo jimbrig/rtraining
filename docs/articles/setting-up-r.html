@@ -72,7 +72,14 @@
   </ul>
 </li>
       </ul>
-<ul class="nav navbar-nav navbar-right"></ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+  <a href="https://github.com/jimbrig/rtraining/">
+    <span class="fab fa fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
 </div>
 <!--/.nav-collapse -->
   </div>
@@ -82,13 +89,13 @@
 
       
 
-      </header><script src="setting-up-r_files/header-attrs-2.2/header-attrs.js"></script><div class="row">
+      </header><script src="setting-up-r_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>R Setup Guide</h1>
             
       
-      
+      <small class="dont-index">Source: <a href="https://github.com/jimbrig/rtraining/blob/master/vignettes/setting-up-r.Rmd"><code>vignettes/setting-up-r.Rmd</code></a></small>
       <div class="hidden name"><code>setting-up-r.Rmd</code></div>
 
     </div>
@@ -300,7 +307,7 @@ Date: June 2, 2020</p>
 <a href="#memory-in-r" class="anchor"></a>Memory in R</h3>
 <p>R breaks down memory usage into <em>Vcells</em> (memory used by vectors) and <em>Ncells</em> (memory used by everything else).</p>
 <p>However, neither this distinction nor the “gc trigger” and “max used” columns are typically important. What we’re usually most interested in is the the first column: the total memory used.</p>
-<p>A helpful function one can use for this is <code><a href="https://rdrr.io/pkg/pryr/man/mem_used.html">pryr::mem_used</a></code> which wraps around gc() to return the total amount of memory (in megabytes) currently used by R. <code><a href="https://rdrr.io/pkg/pryr/man/object_size.html">pryr::object_size()</a></code> is another helpful function which works similarly to <code><a href="https://rdrr.io/r/utils/object.size.html">utils::object.size()</a></code> but counts more accurately and includes the size of environments. <code><a href="https://rdrr.io/pkg/pryr/man/object_size.html">pryr::compare_size</a></code> makes it easy to compare the output of object_size and object.size.</p>
+<p>A helpful function one can use for this is <code>pryr::mem_used</code> which wraps around gc() to return the total amount of memory (in megabytes) currently used by R. <code>pryr::object_size()</code> is another helpful function which works similarly to <code><a href="https://rdrr.io/r/utils/object.size.html">utils::object.size()</a></code> but counts more accurately and includes the size of environments. <code>pryr::compare_size</code> makes it easy to compare the output of object_size and object.size.</p>
 </div>
 </div>
 </div>

@@ -1,21 +1,17 @@
-# R Training
+# index
 
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental) [![Project Status: WIP](https://www.repostatus.org/badges/latest/wip.svg)](http://www.repostatus.org/#wip) 
+title: "R Training" author: "Jimmy Briggs" date: "`r Sys.Date()`" site: https:/bookdown.org/jimbrig2011/r\_training/ documentclass: book bibliography: \[book.bib, packages.bib\] biblio-style: apalike link-citations: yes
 
-### Contents
+### description: "R Training Resources, Guides, Tips, and Knowledge Base."
 
-* [Package HomePage](https://jimbrig.github.io/rtraining/)
-* \[R Setup
+## Introduction
 
-  Guide\]\([https://jimbrig.github.io/rtraining/articles/setting-up-r.html](https://jimbrig.github.io/rtraining/articles/setting-up-r.html)\)
+#### Contents
 
-* \[R Shiny Training
-
-  Resources\]\([https://jimbrig.github.io/rtraining/articles/shiny-training.html](https://jimbrig.github.io/rtraining/articles/shiny-training.html)\)
-
-* \[List of Helpful
-
-  Bookdowns\]\([https://jimbrig.github.io/rtraining/articles/bookdown-list.html](https://jimbrig.github.io/rtraining/articles/bookdown-list.html)\)
+* [Package HomePage](https://jimbrig.github.io/rtraining/) 
+* [R Setup Guide](https://jimbrig.github.io/rtraining/articles/setting-up-r.html) 
+* [R Shiny Training Resources](https://jimbrig.github.io/rtraining/articles/shiny-training.html) 
+* [List of Helpful Bookdowns](https://jimbrig.github.io/rtraining/articles/bookdown-list.html) 
 
 Package {rtraining}: R Training Resources, Guides, Tips, and Knowledge Base.  
 Current version is 0.0.1.
@@ -28,7 +24,7 @@ The package is split into three main areas:
 2. R Workflows: example workflows showcasing the main types of work done with R, including, but not limited to R Data Analysis Projects, Reporting with RMarkdown, R Shiny Applications, R Package Development.
 3. R Tips & Tricks: General tips and tricks learned over time from my experiences with R.
 
-## Installation
+### Installation
 
 You can install the released version of rtraining from [CRAN](https://CRAN.R-project.org) with:
 
@@ -47,14 +43,16 @@ The list of dependencies required to install this package is: attachment, chamel
 
 To install the package, you can run the following script
 
-```r
-# install.packages("remotes")
-remotes::install_local(path = "rtraining_0.0.1.tar.gz")
-```
+\`\`\`{r, echo=TRUE, eval=FALSE}
 
+## install.packages\("remotes"\)
+
+remotes::install\_local\(path = "rtraining\_0.0.1.tar.gz"\)
+
+```text
 In case something went wrong, you may want to install dependencies before using:
 
-```r
+```{r, echo=TRUE, eval=FALSE}
 # Remotes ----
 install.packages("remotes")
 remotes::install_github('ThinkR-open/chameleon')
@@ -71,14 +69,20 @@ to_install <- c("xfun")
 
 Once you have the package installed you can open the website directly by running:
 
-```r
-library(rtraining)
-rtraining::open_pkgdown()
-```
+\`\`\`{r run\_pkgdown, eval=FALSE} library\(rtraining\) rtraining::open\_pkgdown\(\)
 
+```text
 Similarly you can open the package `bookdown` with:
 
-```r
+```{r run_guide, eval=FALSE}
 rtraining::open_guide()
 ```
+
+\`\`\`{r include=FALSE}
+
+## automatically create a bib database for R packages
+
+knitr::write\_bib\(c\( .packages\(\), 'bookdown', 'knitr', 'rmarkdown' \), 'packages.bib'\)
+
+\`\`\`
 

@@ -6,7 +6,7 @@
 \alias{rtraining-package}
 \title{rtraining: R Training Resources, Guides, Tips, and Knowledge Base}
 \description{
-\if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
+\if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 
 Houses variouse material realted to teaching R.
 }
@@ -14,6 +14,7 @@ Houses variouse material realted to teaching R.
 Useful links:
 \itemize{
   \item \url{https://github.com/jimbrig/rtraining}
+  \item \url{https://docs.jimbrig.com/rtraining/}
   \item Report bugs at \url{https://github.com/jimbrig/rtraining/issues}
 }
 

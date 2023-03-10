@@ -194,5 +194,8 @@ chameleon::create_pkg_desc_file(out.dir = ".")
 chameleon::open_guide_function(path = "inst/report")
 devtools::document()
 
+usethis::use_pkgdown_github_pages()
+pkgdown::deploy_site_github()
+
 pkgdown::init_site()
 pkgdown::build_articles()
